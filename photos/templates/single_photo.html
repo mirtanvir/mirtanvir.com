@@ -1,0 +1,12 @@
+<img src="{{ photo_url }}" />
+{% if next_id %}
+  <a href="{% url photos.views.show_single_photo album_id next_id %}?index={{ next_index }}">  next </a>
+{% else %}
+  Next
+{% endif %}
+|
+{% if prev_id %}
+  <a href="{% url photos.views.show_single_photo album_id prev_id %}?index={{ prev_index }}">  prev </a>
+{% else %}
+  Prev
+{% endif %}

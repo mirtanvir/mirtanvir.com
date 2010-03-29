@@ -1,0 +1,8 @@
+{{albums}}
+
+  {% for album in albums %}
+   <a href="{% url photos.views.list_album_pictures  album.id %}" > {{ album.title }} </a>
+   {{ album.description }}
+   
+    <p><img src='{{album.thumbnail_url}}' /> </p>
+  {% endfor %}
